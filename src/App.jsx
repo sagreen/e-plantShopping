@@ -37,15 +37,15 @@ function App() {
           </button>
         </div>
           <div className="aboutus_container">
-          <AboutUs/>
+          <AboutUs />
           </div>
-          </div>
+        </div>
 
       </div>
       <div className={`product-list-container ${showProductList ? 'visible' : ''}`}>
-        <ProductList />
+        <ProductList onCartClick={handleCartClick} />
       </div>
-    {showCart && <CartItem onContinueShopping={handleContinueShopping} />} 
+      {showCart && <CartItem onContinueShopping={handleContinueShopping} />} 
     </div>
   );
 }
